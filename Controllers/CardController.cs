@@ -8,10 +8,11 @@ namespace Final_Project.Controllers
 {
     public class CardController : Controller
     {
-        public IActionResult Card()
+        [HttpGet]
+        public ActionResult Card()
         {
 
-            var client = new RestClient($"https://pokemon-tcg-card-prices.p.rapidapi.com/card?cardNumber=122&name=ArcuesV");
+            var client = new RestClient($"https://pokemon-tcg-card-prices.p.rapidapi.com/card?cardNumber=122&name=Arcues%20V");
 
             var request = new RestRequest();
 
@@ -23,7 +24,7 @@ namespace Final_Project.Controllers
 
             //Console.WriteLine(response);
 
-            Root myDeserializedClass = JsonConvert.DeserializeObject<Root>(response);
+            var myDeserializedClass = JsonConvert.DeserializeObject<Root>(response);
 
             return View(myDeserializedClass);
         }
