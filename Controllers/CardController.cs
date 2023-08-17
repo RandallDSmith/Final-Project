@@ -2,7 +2,8 @@
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using RestSharp;
-using static Final_Project.Models.CardInfo;
+
+
 
 namespace Final_Project.Controllers
 {
@@ -24,9 +25,9 @@ namespace Final_Project.Controllers
 
             //Console.WriteLine(response);
 
-            var myDeserializedClass = JsonConvert.DeserializeObject<Root>(response);
+            var root = JsonConvert.DeserializeObject<Root>(response);
 
-            return View(myDeserializedClass);
+            return View(root);
         }
     }
 }
