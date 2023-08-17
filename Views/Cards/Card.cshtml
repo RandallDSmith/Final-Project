@@ -1,0 +1,23 @@
+﻿@model IEnumerable<Root>
+
+
+
+<table class="table" >
+    <tr>
+        <th>Name</th>
+        <th>Variant</th>
+        <th>Card Number</th>
+        <th>Rarity</th>
+        <th>Card ID</th>
+        <th>Price</th>
+    </tr>
+
+    @foreach (var product in @Model)
+    {
+        <tr>
+            <td><a href=/Root/ViewProduct/@product.cardId>@product.cardId</a></td>
+            <td>@product.name</td>
+            <td>@product.cardNumber</td>
+        </tr>
+    }
+</table>

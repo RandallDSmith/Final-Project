@@ -1,0 +1,40 @@
+D:\Coding School\repos\Final Project\bin\Debug\net7.0\Final Project.staticwebassets.runtime.json
+D:\Coding School\repos\Final Project\bin\Debug\net7.0\Final Project.exe
+D:\Coding School\repos\Final Project\bin\Debug\net7.0\Final Project.deps.json
+D:\Coding School\repos\Final Project\bin\Debug\net7.0\Final Project.runtimeconfig.json
+D:\Coding School\repos\Final Project\bin\Debug\net7.0\Final Project.dll
+D:\Coding School\repos\Final Project\bin\Debug\net7.0\Final Project.pdb
+D:\Coding School\repos\Final Project\obj\Debug\net7.0\Final Project.csproj.AssemblyReference.cache
+D:\Coding School\repos\Final Project\obj\Debug\net7.0\Final Project.GeneratedMSBuildEditorConfig.editorconfig
+D:\Coding School\repos\Final Project\obj\Debug\net7.0\Final Project.AssemblyInfoInputs.cache
+D:\Coding School\repos\Final Project\obj\Debug\net7.0\Final Project.AssemblyInfo.cs
+D:\Coding School\repos\Final Project\obj\Debug\net7.0\Final Project.csproj.CoreCompileInputs.cache
+D:\Coding School\repos\Final Project\obj\Debug\net7.0\Final Project.MvcApplicationPartsAssemblyInfo.cache
+D:\Coding School\repos\Final Project\obj\Debug\net7.0\Final Project.RazorAssemblyInfo.cache
+D:\Coding School\repos\Final Project\obj\Debug\net7.0\Final Project.RazorAssemblyInfo.cs
+D:\Coding School\repos\Final Project\obj\Debug\net7.0\staticwebassets\msbuild.Final Project.Microsoft.AspNetCore.StaticWebAssets.props
+D:\Coding School\repos\Final Project\obj\Debug\net7.0\staticwebassets\msbuild.build.Final Project.props
+D:\Coding School\repos\Final Project\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.Final Project.props
+D:\Coding School\repos\Final Project\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.Final Project.props
+D:\Coding School\repos\Final Project\obj\Debug\net7.0\staticwebassets.pack.json
+D:\Coding School\repos\Final Project\obj\Debug\net7.0\staticwebassets.build.json
+D:\Coding School\repos\Final Project\obj\Debug\net7.0\staticwebassets.development.json
+D:\Coding School\repos\Final Project\obj\Debug\net7.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+D:\Coding School\repos\Final Project\obj\Debug\net7.0\scopedcss\bundle\Final Project.styles.css
+D:\Coding School\repos\Final Project\obj\Debug\net7.0\scopedcss\projectbundle\Final Project.bundle.scp.css
+D:\Coding School\repos\Final Project\obj\Debug\net7.0\Final Project.dll
+D:\Coding School\repos\Final Project\obj\Debug\net7.0\refint\Final Project.dll
+D:\Coding School\repos\Final Project\obj\Debug\net7.0\Final Project.pdb
+D:\Coding School\repos\Final Project\obj\Debug\net7.0\Final Project.genruntimeconfig.cache
+D:\Coding School\repos\Final Project\obj\Debug\net7.0\ref\Final Project.dll
+D:\Coding School\repos\Final Project\bin\Debug\net7.0\Newtonsoft.Json.dll
+D:\Coding School\repos\Final Project\obj\Debug\net7.0\Final Project.csproj.CopyComplete
+D:\Coding School\repos\Final Project\bin\Debug\net7.0\RestSharp.dll
+D:\Coding School\repos\Final Project\bin\Debug\net7.0\System.Web.Mvc.dll
+D:\Coding School\repos\Final Project\bin\Debug\net7.0\System.Web.Razor.dll
+D:\Coding School\repos\Final Project\bin\Debug\net7.0\System.Web.Helpers.dll
+D:\Coding School\repos\Final Project\bin\Debug\net7.0\System.Web.WebPages.Deployment.dll
+D:\Coding School\repos\Final Project\bin\Debug\net7.0\System.Web.WebPages.Razor.dll
+D:\Coding School\repos\Final Project\bin\Debug\net7.0\System.Web.WebPages.dll
+D:\Coding School\repos\Final Project\bin\Debug\net7.0\Microsoft.Web.Infrastructure.dll
+D:\Coding School\repos\Final Project\bin\Debug\net7.0\Newtonsoft.JsonResult.dll
