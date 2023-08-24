@@ -1,4 +1,6 @@
-﻿namespace Final_Project.Models
+﻿using System.Text;
+
+namespace Final_Project.Models
 {
     public class CardInfo
     {
@@ -192,7 +194,7 @@
 
         public class Result
         {
-            public string? cardId { get; set; }
+			public string? cardId { get; set; }
             public string? name { get; set; }
             public string? cardNumber { get; set; }
             public string? setNumber { get; set; }

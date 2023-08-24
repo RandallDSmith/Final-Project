@@ -1,19 +1,10 @@
-﻿
+﻿using static Final_Project.Models.CardInfo;
 
 namespace Final_Project.Models
 {
     public class Root
     {
-        public string? cardId { get; set; }
-        public string? name { get; set; }
-        public string? cardNumber { get; set; }
-        public string? variant { get; set; }
-        public string? rarity { get; set; }
-              
-
-        /*
-              public List<Result>? results { get; set; }
-              public Paging? paging { get; set; }
-          */
-    }
+		public List<Result>? cardInfo { get; set; }
+		public Paging? paging { get; set; }
+	}
 }

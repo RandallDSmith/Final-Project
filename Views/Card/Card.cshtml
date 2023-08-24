@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Root>
+﻿@model Final_Project.Models.Root
 
 <h2>Card Info</h2>
 
@@ -13,18 +13,24 @@
         <th>Card Number</th>
         <th>Rarity</th>
         <th>Card ID</th>
-        <th>Price</th>
+        <th>High Price</th>
+        <th>Low Price</th>
+        <th>Market Price</th>
+
     </tr>
 
-    @foreach (var product in @Model)
+    @foreach (var product in @Model.cardInfo)
     {
         <tr>
-            <td><a href=/Root/ViewProduct/@product.cardId>@product.cardId</a></td>
+            <td><a href=/CardInfo/ViewProduct/@product.name>@product.name</a></td>
             <td>@product.name</td>
             <td>@product.variant</td>
             <td>@product.cardNumber</td>
             <td>@product.rarity</td>
             <td>@product.cardId</td>
+            <td>@product.prices.tcgPlayer[1].high</td>
+            <td>@product.prices.tcgPlayer[1].low</td>
+            <td>@product.prices.tcgPlayer[1].market</td>
         </tr>
     }
 </table>

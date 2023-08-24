@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "WQGx+pTdyh9E9l+eUsGyheq0tAt7yA80hWleivBQ6cNCt84Gw+LTqByaA3h1131zjHN4LdmdblaGwAjF1FHnOw==",
+  "dgSpecHash": "XsdQwiXqeoCJp9GyIUdTJxv7/5QQEMzxOYCipLmr42oOUmpB8IFyJEsiPk3KLIzX7aV1rgDgDdgEYqqDiaeu0w==",
   "success": true,
   "projectFilePath": "D:\\Coding School\\repos\\Final Project\\Final Project.csproj",
   "expectedPackageFiles": [
@@ -102,6 +102,7 @@
     "C:\\Users\\rdsmi\\.nuget\\packages\\nuget.protocol\\6.6.1\\nuget.protocol.6.6.1.nupkg.sha512",
     "C:\\Users\\rdsmi\\.nuget\\packages\\nuget.versioning\\6.6.1\\nuget.versioning.6.6.1.nupkg.sha512",
     "C:\\Users\\rdsmi\\.nuget\\packages\\restsharp\\110.2.0\\restsharp.110.2.0.nupkg.sha512",
+    "C:\\Users\\rdsmi\\.nuget\\packages\\restsharp.serializers.newtonsoftjson\\110.2.0\\restsharp.serializers.newtonsoftjson.110.2.0.nupkg.sha512",
     "C:\\Users\\rdsmi\\.nuget\\packages\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "C:\\Users\\rdsmi\\.nuget\\packages\\runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "C:\\Users\\rdsmi\\.nuget\\packages\\runtime.fedora.24-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.fedora.24-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
