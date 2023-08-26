@@ -19,18 +19,17 @@
 
     </tr>
 
-    @foreach (var product in @Model.cardInfo)
+    @foreach (var product in @Model.results)
     {
         <tr>
-            <td><a href=/CardInfo/ViewProduct/@product.name>@product.name</a></td>
             <td>@product.name</td>
             <td>@product.variant</td>
             <td>@product.cardNumber</td>
             <td>@product.rarity</td>
             <td>@product.cardId</td>
-            <td>@product.prices.tcgPlayer[1].high</td>
-            <td>@product.prices.tcgPlayer[1].low</td>
-            <td>@product.prices.tcgPlayer[1].market</td>
+            <td>@product.prices.tcgPlayer[1].high.amountInMinorUnits</td>
+            <td>@product.prices.tcgPlayer[1].low.amountInMinorUnits</td>
+            <td>@product.prices.tcgPlayer[1].market.amountInMinorUnits</td>
         </tr>
     }
 </table>
