@@ -14,14 +14,7 @@ namespace Final_Project.Controllers
 
 		public IActionResult Card()
         {
-			//IConfiguration config = new ConfigurationBuilder()
-			//.SetBasePath(Directory.GetCurrentDirectory())
-			//.AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
-			//.Build();
-
-   //         string apiKey = config["AppSettings:ApiKey"];
-
-   //         string apiHost = config["appsettings:ApiHost"];
+			
 
 			var client = new RestClient($"https://pokemon-tcg-card-prices.p.rapidapi.com/card?cardNumber=122&name=Arceus%20V");
 
