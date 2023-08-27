@@ -1,10 +1,9 @@
-
-using Final_Project.Controllers;
-using Final_Project.Models;
+using Final_Project;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.Configure<ApiSettings>(builder.Configuration.GetSection("AppSettings"));
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();

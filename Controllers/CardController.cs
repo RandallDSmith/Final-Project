@@ -1,5 +1,6 @@
 ﻿using Final_Project.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Options;
 using Newtonsoft.Json;
 using RestSharp;
 
@@ -10,13 +11,11 @@ namespace Final_Project.Controllers
 
 	public class CardController : Controller
     {
-		
 
-		public IActionResult Card()
+		public IActionResult Card(string cardName, string cardNumber)
         {
-			
 
-			var client = new RestClient($"https://pokemon-tcg-card-prices.p.rapidapi.com/card?cardNumber=122&name=Arceus%20V");
+		    var client = new RestClient($"https://pokemon-tcg-card-prices.p.rapidapi.com/card?cardNumber={cardNumber}&name={cardName}");
 
             var request = new RestRequest();
 

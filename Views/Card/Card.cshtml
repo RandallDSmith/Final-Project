@@ -2,9 +2,6 @@
 
 <h2>Card Info</h2>
 
-<div> style="display: block">
-    <a href="/Card/DispayCard/">Card Information</a>
-</div>
 
 <table class="table" >
     <tr>
@@ -12,7 +9,7 @@
         <th>Variant</th>
         <th>Card Number</th>
         <th>Rarity</th>
-        <th>Card ID</th>
+        <th>Artist</th>
         <th>High Price</th>
         <th>Low Price</th>
         <th>Market Price</th>
@@ -26,7 +23,7 @@
             <td>@product.variant</td>
             <td>@product.cardNumber</td>
             <td>@product.rarity</td>
-            <td>@product.cardId</td>
+            <td>@product.artist</td>
             <td>@product.prices.tcgPlayer[1].high.amountInMinorUnits</td>
             <td>@product.prices.tcgPlayer[1].low.amountInMinorUnits</td>
             <td>@product.prices.tcgPlayer[1].market.amountInMinorUnits</td>
