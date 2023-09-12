@@ -18,5 +18,35 @@ html {
 }
 
 body {
-  margin-bottom: 60px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+footer {
+    margin-top: auto;
+}
+
+.image-container{
+    display: flex;
+    justify-content: stretch;
+    align-content: center;
+    min-height: 100vh;
+}
+
+.search-form {
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.table{
+    background-color: white;
+}
+
+.title{
+    background-color: white;
 }

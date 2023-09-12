@@ -1,32 +1,49 @@
 ﻿@model Final_Project.Models.Root
 
-<h2>Card Info</h2>
+<div style="background-color: white;">
+    <h2>Card Info</h2>
+</div>
 
+@if (!string.IsNullOrEmpty(ViewBag.ErrorMessage))
+{
+    <div class="alert alert-danger">
+        @ViewBag.ErrorMessage
+    </div>
+}
 
-<table class="table" >
-    <tr>
-        <th>Name</th>
-        <th>Variant</th>
-        <th>Card Number</th>
-        <th>Rarity</th>
-        <th>Artist</th>
-        <th>High Price</th>
-        <th>Low Price</th>
-        <th>Market Price</th>
-
-    </tr>
-
-    @foreach (var product in @Model.results)
-    {
+@if (Model != null)
+{
+    <table class="table" >
         <tr>
-            <td>@product.name</td>
-            <td>@product.variant</td>
-            <td>@product.cardNumber</td>
-            <td>@product.rarity</td>
-            <td>@product.artist</td>
-            <td>@product.prices.tcgPlayer[1].high.amountInMinorUnits</td>
-            <td>@product.prices.tcgPlayer[1].low.amountInMinorUnits</td>
-            <td>@product.prices.tcgPlayer[1].market.amountInMinorUnits</td>
+            <th>Name</th>
+            <th>Variant</th>
+            <th>Card Number</th>
+            <th>Rarity</th>
+            <th>Date Price Posted</th>
+            <th>High Price</th>
+            <th>Low Price</th>
+            <th>Market Price</th>
+
         </tr>
-    }
-</table>
+
+        @foreach (var product in @Model.results)
+        {
+            <tr>
+                <td>@product.name</td>
+                <td>@product.variant</td>
+                <td>@product.cardNumber</td>
+                <td>@product.rarity</td>
+                <td>@product.listingLastUpdatedAt</td>
+                <td>$@(
+                   String.Format("{0:F2}", product.prices.tcgPlayer[1].high.amountInMinorUnits / 100)
+                   )</td>
+                <td>$@(
+                   String.Format("{0:F2}", product.prices.tcgPlayer[1].low.amountInMinorUnits / 100)
+                   )</td>
+                <td>$@(
+                   String.Format("{0:F2}", product.prices.tcgPlayer[1].market.amountInMinorUnits / 100)
+                   )</td>
+            </tr>
+        }
+    </table>
+}

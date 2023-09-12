@@ -31,26 +31,26 @@
     <div class="container">    
         <main role="main" class="pb-3">          
             @RenderBody()
-                <div class="background-image">
-                    <form method="post" asp-controller="Card" asp-action="Card">
-                        <input type="text" name="cardName" placeholder="Enter Card Name" />
-                        <input type="text" name="cardNumber" placeholder="Enter Card Number" />
-                        <button type="submit">Search</button>
+                <div>
+                    <form method="post" asp-controller="Card" asp-action="Card" class="search-form">
+                            <input type="text" name="cardName" placeholder="Enter Card Name" required />
+                            <input type="text" name="cardNumber" placeholder="Enter Card Number" required />
+                            <button type="submit">Search</button>
                     </form>
-                    
-                    @*<style>
+                
+                    <style>
                         body {
                             background-image: url(https://www.wikihow.com/images/5/51/Sell-Your-Pokemon-Cards-Step-13.jpg);
-                            background-size: contain;
+                            background-attachment: fixed;
                             background-repeat: no-repeat;
                             background-position: center;
                         }
-                    </style>*@
+                    </style>
+                    
                 </div>
         </main>
     </div>
-
-    <footer class="border-top footer text-muted ">
+    <footer class="border-top footer text-muted" style="background-color: white;">
         <div class="container">
             &copy; 2023 - Final_Project - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>

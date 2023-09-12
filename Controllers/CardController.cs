@@ -11,39 +11,48 @@ namespace Final_Project.Controllers
 
 	public class CardController : Controller
 	{
-		private readonly IConfiguration _configuration;
+        
+        private readonly ApiSettings _aSettings;
 
-		public CardController(IConfiguration configuration)
-		{
-			_configuration = configuration;
-		}
+        public CardController(IOptions<ApiSettings> aSettings)
+        {
+            _aSettings = aSettings.Value;
+        }
 
-		public JsonResult GetAPIData(string apiConfig)
-		{
-			string? apiKey = _configuration.GetSection("ApiConfig:ApiKey").Value;
-			string? apiHost = _configuration.GetSection("ApiConfig:ApiHost").Value;
+        [HttpGet("ApiConfig")]
+        public ApiSettings Get() => _aSettings;
 
-			return Json(apiConfig);
-		}
-		
+        public IActionResult GetApiSettings()
+        {
+            var apiKey = _aSettings.ApiKey;
+            var apiHost = _aSettings.ApiHost;
+
+            return Json(_aSettings);
+        }
+    
 		public IActionResult Card(string cardName, string cardNumber)
 		{
 
 			var client = new RestClient($"https://pokemon-tcg-card-prices.p.rapidapi.com/card?cardNumber={cardNumber}&name={cardName}");
 
             var request = new RestRequest();
+           
+            request.AddHeader("X-RapidAPI-Key", $"{_aSettings.ApiKey}");
 
-            request.AddHeader("X-RapidAPI-Key", $"ff84c857bbmsheb2bb98fa878952p191cb2jsna8a78f2f9855");
-
-            request.AddHeader("X-RapidAPI-Host", "pokemon-tcg-card-prices.p.rapidapi.com");
+            request.AddHeader("X-RapidAPI-Host", $"{_aSettings.ApiHost}");
 
             var response = client.Execute(request).Content;
 
-            //Console.WriteLine(response);
 
             var result = JsonConvert.DeserializeObject<Root>(response);
 
-            return View(result);
+            if(result.results == null)
+            {
+                ViewBag.ErrorMessage = "Error: The card you entered does not exist.  Please Try again";
+                return View();
+            }
+
+			return View(result);
         }
     }
 }

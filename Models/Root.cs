@@ -68,7 +68,7 @@ namespace Final_Project.Models
 		public class High
 		{
 			public string currencyCode { get; set; }
-			public int amountInMinorUnits { get; set; }
+			public decimal amountInMinorUnits { get; set; }
 		}
 
 		public class HighListingPrice
@@ -92,7 +92,7 @@ namespace Final_Project.Models
 		public class Low
 		{
 			public string currencyCode { get; set; }
-			public int amountInMinorUnits { get; set; }
+			public decimal amountInMinorUnits { get; set; }
 		}
 
 		public class LowListingPrice
@@ -116,7 +116,7 @@ namespace Final_Project.Models
 		public class Market
 		{
 			public string currencyCode { get; set; }
-			public int amountInMinorUnits { get; set; }
+			public decimal amountInMinorUnits { get; set; }
 		}
 
 		public class MaxListingPrice
@@ -260,6 +260,7 @@ namespace Final_Project.Models
 			public int amountInMinorUnits { get; set; }
 		}
 
+		
 
 	}
 }

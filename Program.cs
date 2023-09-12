@@ -3,7 +3,7 @@ using Final_Project;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.Configure<ApiSettings>(builder.Configuration.GetSection("AppSettings"));
+builder.Services.Configure<ApiSettings>(builder.Configuration.GetSection("ApiConfig"));
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
@@ -28,6 +28,7 @@ app.MapControllerRoute(
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
 app.Run();
+
 
 
 
