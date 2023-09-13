@@ -36,10 +36,10 @@ namespace Final_Project.Controllers
 			var client = new RestClient($"https://pokemon-tcg-card-prices.p.rapidapi.com/card?cardNumber={cardNumber}&name={cardName}");
 
             var request = new RestRequest();
-           
-            request.AddHeader("X-RapidAPI-Key", $"{_aSettings.ApiKey}");
 
-            request.AddHeader("X-RapidAPI-Host", $"{_aSettings.ApiHost}");
+            request.AddHeader("X-RapidAPI-Key", $"ff84c857bbmsheb2bb98fa878952p191cb2jsna8a78f2f9855");
+
+            request.AddHeader("X-RapidAPI-Host", "pokemon-tcg-card-prices.p.rapidapi.com");
 
             var response = client.Execute(request).Content;
 

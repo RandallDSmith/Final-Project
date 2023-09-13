@@ -33,7 +33,7 @@
                 <td>@product.variant</td>
                 <td>@product.cardNumber</td>
                 <td>@product.rarity</td>
-                <td>@product.listingLastUpdatedAt</td>
+                <td>@product.listingLastUpdatedAt.ToString("yyyy-MM-dd")</td>
                 <td>$@(
                    String.Format("{0:F2}", product.prices.tcgPlayer[1].high.amountInMinorUnits / 100)
                    )</td>
