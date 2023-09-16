@@ -229,4 +229,4 @@ D:\Coding School\repos\Final Project\obj\Debug\net7.0\refint\Final Project.dll
 D:\Coding School\repos\Final Project\obj\Debug\net7.0\Final Project.pdb
 D:\Coding School\repos\Final Project\obj\Debug\net7.0\Final Project.genruntimeconfig.cache
 D:\Coding School\repos\Final Project\obj\Debug\net7.0\ref\Final Project.dll
-D:\Coding School\repos\Final Project\bin\Debug\net7.0\ConFig\appsettings.json
+D:\Coding School\repos\Final Project\bin\Debug\net7.0\appsettings.json

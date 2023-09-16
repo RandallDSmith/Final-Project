@@ -3,16 +3,17 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] PPC</title>
+    <title>@ViewData["Title"] Pokemon Price Guide</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/Final_Project.styles.css" asp-append-version="true" />
+    <link rel="icon" type="image/x-icon" href="https://tenor.com/byuK9.gif" />
 </head>
-<body>
+<body style="background-image: url('https://www.wikihow.com/images/5/51/Sell-Your-Pokemon-Cards-Step-13.jpg');">
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">PPG</a>
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Pokemon Price Guide</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -23,31 +24,31 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
                     </ul>
-                </div>
-            </div>
+                </div>                
+            </div>          
         </nav>
     </header>
     
     <div class="container">    
-        <main role="main" class="pb-3">          
+        <main role="main" class="pb-3">
             @RenderBody()
-                <div>
+                <div>               
                     <form method="post" asp-controller="Card" asp-action="Card" class="search-form">
+                        <div>
+                            <label class="label">Enter the card you want to look up</label>
+                        </div>
+                        <div class="form-group">
+                            @* <label class="label">Enter the card you want to look up</label> *@
                             <input type="text" name="cardName" placeholder="Enter Card Name" required />
-                            <input type="text" name="cardNumber" placeholder="Enter Card Number" required />
-                            <button type="submit">Search</button>
-                    </form>
-                
-                    <style>
-                        body {
-                            background-image: url(https://www.wikihow.com/images/5/51/Sell-Your-Pokemon-Cards-Step-13.jpg);
-                            background-attachment: fixed;
-                            background-repeat: no-repeat;
-                            background-position: center;
-                        }
-                    </style>
-                    
+                        </div>
+                        <div class="form-group">
+                          @*   <label class="label">Enter Card Number</label> *@
+                            <input type="text" name="cardNumber" placeholder="Enter Card Number" required/>
+                        </div>
+                        <button type="submit">Search</button>
+                    </form>                  
                 </div>
+
         </main>
     </div>
     <footer class="border-top footer text-muted" style="background-color: white;">

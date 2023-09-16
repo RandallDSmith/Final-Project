@@ -1,6 +1,6 @@
 ﻿@model Final_Project.Models.Root
 
-<div style="background-color: white;">
+<div style="background-color: lightgoldenrodyellow;">
     <h2>Card Info</h2>
 </div>
 
@@ -13,7 +13,7 @@
 
 @if (Model != null)
 {
-    <table class="table" >
+    <table class="table">
         <tr>
             <th>Name</th>
             <th>Variant</th>
@@ -33,7 +33,7 @@
                 <td>@product.variant</td>
                 <td>@product.cardNumber</td>
                 <td>@product.rarity</td>
-                <td>@product.listingLastUpdatedAt.ToString("yyyy-MM-dd")</td>
+                <td>@product.listingLastUpdatedAt.ToString("MM-dd-yyyy")</td>
                 <td>$@(
                    String.Format("{0:F2}", product.prices.tcgPlayer[1].high.amountInMinorUnits / 100)
                    )</td>

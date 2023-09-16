@@ -1,7 +1,10 @@
-﻿using Final_Project.Models;
+﻿using System.Security.Cryptography.X509Certificates;
+using Final_Project.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.DotNet.MSIdentity.Shared;
 using Microsoft.Extensions.Options;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using RestSharp;
 
 
@@ -11,7 +14,7 @@ namespace Final_Project.Controllers
 
 	public class CardController : Controller
 	{
-        
+
         private readonly ApiSettings _aSettings;
 
         public CardController(IOptions<ApiSettings> aSettings)
@@ -29,30 +32,37 @@ namespace Final_Project.Controllers
 
             return Json(_aSettings);
         }
-    
-		public IActionResult Card(string cardName, string cardNumber)
+
+        public IActionResult Card(string cardName, string cardNumber)
 		{
 
 			var client = new RestClient($"https://pokemon-tcg-card-prices.p.rapidapi.com/card?cardNumber={cardNumber}&name={cardName}");
 
             var request = new RestRequest();
 
-            request.AddHeader("X-RapidAPI-Key", $"ff84c857bbmsheb2bb98fa878952p191cb2jsna8a78f2f9855");
+            request.AddHeader("X-RapidAPI-Key", $"{_aSettings.ApiKey}");
 
-            request.AddHeader("X-RapidAPI-Host", "pokemon-tcg-card-prices.p.rapidapi.com");
+            request.AddHeader("X-RapidAPI-Host", $"{_aSettings.ApiHost}");
 
             var response = client.Execute(request).Content;
 
 
             var result = JsonConvert.DeserializeObject<Root>(response);
 
-            if(result.results == null)
+            if (result.results.Count == 0)
             {
                 ViewBag.ErrorMessage = "Error: The card you entered does not exist.  Please Try again";
                 return View();
             }
+            //JObject data = JObject.Parse(result);
 
-			return View(result);
+            //if (data.Count == 0)
+            //{
+            //    ViewBag.Message = "Please enter a valid card name and number";
+            //}
+
+
+            return View(result);
         }
     }
 }
