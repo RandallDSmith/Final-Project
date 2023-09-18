@@ -54,13 +54,6 @@ namespace Final_Project.Controllers
                 ViewBag.ErrorMessage = "Error: The card you entered does not exist.  Please Try again";
                 return View();
             }
-            //JObject data = JObject.Parse(result);
-
-            //if (data.Count == 0)
-            //{
-            //    ViewBag.Message = "Please enter a valid card name and number";
-            //}
-
 
             return View(result);
         }
